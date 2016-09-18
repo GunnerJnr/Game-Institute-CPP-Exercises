@@ -26,7 +26,7 @@ void Navigator::AskDirections()
 {
 	// output a message to the user
 	cout << "Which direction do you want to go: " << endl;
-	cout << "[N]orth, [East], [S]outh, [W]est or [Q]uit : ";
+	cout << "[N]orth, [E]ast, [S]outh, [W]est or [Q]uit : ";
 	// store the users input
 	cin >> userChoice;
 
