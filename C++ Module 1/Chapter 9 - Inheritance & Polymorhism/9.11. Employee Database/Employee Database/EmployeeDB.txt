@@ -1,0 +1,66 @@
+			Employee Details for the Managers
+			---------------------------------
+
+Employee name : Joe Bloggs
+Annual salary : 17.25
+Number of meetings : 10
+Number of days holiday remaining : 22
+			Employee Details for the Managers
+			---------------------------------
+
+Employee name : Joe Bloggs
+Annual salary : 17.25
+Number of meetings : 10
+Number of days holiday remaining : 22
+			Employee Details for the Managers
+			---------------------------------
+
+Employee name : Joe Bloggs
+Annual salary : 17.25
+Number of meetings : 10
+Number of days holiday remaining : 22
+			Employee Details for the Engineers
+			------------------------------------
+
+Employee name : Joe Bloggs
+Annual salary : 17.25
+C++ Degree ? : Yes
+How many years experience : 7
+What type of engineer are you ? : Software engineer
+			Employee Details for the Engineers
+			------------------------------------
+
+Employee name : Joe Bloggs
+Annual salary : 17.25
+C++ Degree ? : Yes
+How many years experience : 7
+What type of engineer are you ? : Software engineer
+			Employee Details for the Engineers
+			------------------------------------
+
+Employee name : Joe Bloggs
+Annual salary : 17.25
+C++ Degree ? : Yes
+How many years experience : 7
+What type of engineer are you ? : Software engineer
+			Employee Details for the Researchers
+			------------------------------------
+
+Employee name: Joe Bloggs
+Annual salary : 17.25
+School attended : 
+Subject chosen : 
+			Employee Details for the Researchers
+			------------------------------------
+
+Employee name: Joe Bloggs
+Annual salary : 17.25
+School attended : 
+Subject chosen : 
+			Employee Details for the Researchers
+			------------------------------------
+
+Employee name: Joe Bloggs
+Annual salary : 17.25
+School attended : 
+Subject chosen : 

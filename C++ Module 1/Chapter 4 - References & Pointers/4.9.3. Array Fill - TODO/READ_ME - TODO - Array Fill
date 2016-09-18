@@ -1,0 +1,21 @@
+4.9.3 Array Fill
+
+Write a function called RandomArrayFill that inputs (i.e., takes a parameter) an integer array, and also that inputs (i.e., takes a parameter) an integer,
+which contains the size of the array.  The function is then to write a random number, in the range [0, 100], to each element of the array.  
+The function declaration of this function should look like so: 
+
+    void RandomArrayFill(int* array, int size);
+    
+Now write a program that asks the user to input the size of an integer array.  The program then needs to create an array of exactly this size.  
+Next, the program must pass this created array to the RandomArrayFill function, so that a random number is assigned to each element of the array.  
+After which, the program must output every array element to the console window.  Your program output should look similar to this: 
+
+Enter the size of an array to create: 6 
+Creating array and filling it with random numbers... 
+Array = {57, 23, 34, 66, 2, 96} 
+Press any key to continue 
+
+After you finish implementing the above function, rewrite it again, but this time using std::vector.  The function declaration of this new function should look like so: 
+
+    void RandomArrayFill(std::vector& vec); 
+    

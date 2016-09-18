@@ -1,0 +1,102 @@
+3.7.8 Bubble Sort
+
+Background Information  
+
+The bubble sort algorithm is similar to the selection sort in that it also makes several passes over the array, and after each pass the array becomes more and more sorted.  However, the bubble sort has a couple of advantages over the selection sort.  First, besides moving one element to its sorted position per pass, the other elements bubble closer to their correct positions.  Second, we can skip a pass if it is unnecessary; that is, if the next element is already in its sorted position then we do not need to do any work and we can skip to the next element.
+
+The bubble sort algorithm is best explained by looking at an example.  Consider the following array of integers:   
+
+x[6] = x[0],,[5] = {12, 5, 21, 1, 15, 17}.  
+
+And suppose that we wish to sort this array in ascending order. 
+
+Pass 1:  
+
+On the first pass, our working subarray is x[0],,x[5] (the entire array).  We start at x[0] and compare it to its right-next-door neighbor x[1].  Because 12 is greater than 5, we swap the two values.  
+
+This yields:  
+
+5, 12, 21, 1, 15, 17  
+
+Next, we compare x[1] and x[2].  Because 12 is less than 21, we do not swap the two values.  Thus the array remains unchanged.  Continuing the pattern by comparing x[2] and x[3], we have 21 is greater than 1, so we swap the two values:  
+
+5, 12, 1, 21, 15, 17  
+
+Repeating this process yields:  
+
+5, 12, 1, 15, 21, 17 // comparing x[3] and x[4] 
+5, 12, 1, 15, 17, 21 // comparing x[4] and x[5]  
+
+From this first pass we observe the following rule:  
+
+ Rule 1: If x[i] is greater than its right-next-door neighbor x[i+1] then swap x[i] and x[i+1].   
+
+In consequence to this rule, we are guaranteed, for each pass, that the greatest value in the working subarray will be placed in its sorted position.  And indeed, observe that the greatest value, 21, is in its sorted position (the top of the array). 
+
+Pass 2: 
+
+ We are guaranteed from the previous pass that the greatest value is correctly positioned at the top of the working subarray. Hence, for the second pass we need only consider the subarray x[0],,x[4].  We start at x[0] and compare it to its right-next-door neighbor x[1].  Because 5 is less than 12 we do nothing.  Comparing x[1] and x[2] we have 12 is greater than 1, which indicates a swap operation must take place.  Swapping x[1] and x[2] yields: 
+
+5, 1, 12, 15, 17, 21 
+
+Continuing this pattern results in the following: 
+
+5, 1, 12, 15, 17, 21 // comparing x[2] and x[3] results in no change.
+5, 1, 12, 15, 17, 21 // comparing x[3] and x[4] results in no change.
+
+Observe that the last element to be involved in a swap operation is x[2].  Moreover, observe that the subarray x[2],,x[5] is sorted.  This is no coincidence and brings us to a new rule: 
+
+ Rule 2: Suppose we are working with a zero-based array of n elements.  For a particular bubble sort pass, if the last element to be involved in a swap operation is x[k] then we can conclude that the subarray x[k],,x[n-1] is sorted. 
+
+Pass 3: 
+
+The previous pass told us that the last swap occurred at x[2].  Thus, for this pass we are only concerned with the subarray x[0],,x[1].  We start at x[0] and compare it to its right-next-door neighbor x[1].  Since 5 is greater than 1 we swap the values.  This yields: 
+
+1, 5, 12, 15, 17, 21 
+
+ We are now done with the third pass.  Because the last index involved in the last swap was x[1], we can conclude, from Rule 2, that the subarray x[1],,x[5] is sorted.  But if x[1],,x[5] is sorted then the last element x[0] must also be in its sorted position, and from inspection we observe it is.  Thus the entire array has been sorted in ascending order.  
+
+The following algorithm outline summarizes the bubble sort: 
+
+Table 3: Ascending order Bubble Sort. 
+
+Let x[n] = x[0],...,x[n-1] be an array of given integers to sort.
+Let SubArrayEnd be an integer to store the last index of the working subarray. 
+Let nextEnd be an integer used to help compute the end of the next pass  subarray.   
+
+Initialize SubArrayEnd = n  1.  
+While SubArrayEnd > 0, do the following:  
+1. Initialize nextEnd = 0; 
+2. For 0=j to SubArrayEnd - 1, do the following: 
+	a. If x[j] > x[j+1] then  
+		i. swap x[j] and x[j+1]. 
+		ii.   nextEnd = j; 
+	b. Increment j.            
+3. SubArrayEnd = nextEnd. 
+
+Exercise
+
+Ask the user to input ten random (non-sorted) integers and store them in an array.  Sort these integers in ascending order using a bubble sort function and output the sorted array to the user.  Your function should have the following prototype:
+
+	void BubbleSort(int data[], int n);
+
+where data is the array parameter, and n is the number of elements in the array (i.e., the size of the array). 
+
+Your output should look similar to the following: 
+
+Enter ten unsorted integers... 
+[0] = 5 
+[1] = -3 
+[2] = 2 
+[3] = 1 
+[4] = 7 
+[5] = -9 
+[6] = 4 
+[7] = -5 
+[8] = 6 
+[9] = -12 
+
+Unsorted List = 5, -3, 2, 1, 7, -9, 4, -5, 6, -12, 
+Sorting... 
+Sorted List = -12, -9, -5, -3, 1, 2, 4, 5, 6, 7, 
+Press any key to continue

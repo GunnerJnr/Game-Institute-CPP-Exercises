@@ -1,0 +1,44 @@
+4.9.4 Quadratic Equation 
+
+Background Info 
+
+Recall that the standard form of a quadratic equation is given by:
+
+     y = ax² + bx + c
+
+Here, a, b, and c are called the coefficients of the quadratic equation. Geometrically, this describes a parabola—Figure 4.11. Often we want to find the values of 
+x where the parabola intersects the x-axis; that is, find x such that y = ax² + bx + c = 0. These values of x are called the roots of the quadratic equation.
+
+http://prntscr.com/8lctz2 << link to graph image for quadratic equation.
+
+http://prntscr.com/8lcuh7 << image to math equations
+http://prntscr.com/8lcumk << math equations continued
+
+Exercise 
+
+ Write a function that inputs (i.e., takes as parameters) the coefficients of a quadratic equation, and outputs the result.  The function should return two solutions 
+ with two parts: 
+     1) A real part and 
+     2) an imaginary part.  
+     
+Of course, if a solution does not have an imaginary part (or real part, for that matter) then the corresponding component will just be zero (e.g., i20+, i03+).
+The function should be prototyped as follows: 
+
+    bool QuadraticFormula(float a, float b, float c,   float& r1, float& i1, float& r2, float& i2);
+    
+Where a, b, and c are the coefficients of the quadratic equation.  And where r1 denotes the real part of solution 1 and where i1 denotes the imaginary part of solution 1. 
+Likewise, r2 denotes the real part of solution 2 and i2 denotes the imaginary part of solution 2.
+ 
+ Note that the return type is a bool. The return value is determined as follows:
+ 
+     If the function contains an imaginary part 
+         then return false, 
+    otherwise 
+        return true.  
+
+We do this because some applications might not want to work with non-real results (i.e., results that have imaginary parts), and such application can easily test for 
+a non-real result by examining the return value of this function. 
+
+Test your function with the coefficients given in the quadratic equations from the above three examples.  Your output should be formatted similar to this: 
+
+    Coefficients a=1, b=2, c=5 yield S1 = -1 + 2i, and S2 = -1 – 2i
